@@ -7,6 +7,12 @@ import ChooseFile from "../pages/admin/choose_file_page";
 import Data from "../pages/admin/Data";
 import BillGeneratedUser from "../pages/admin/status/BillGeneratedUser";
 import BillNotGeneratedUser from "../pages/admin/status/BillNotGeneratedUser";
+import UserDashboard from "../pages/user/User-dashboard";
+import UserSummary from "../pages/user/user-summary";
+import UserActivityBase from "../pages/user/user-activitybase";
+import UserPaperSetting from "../pages/user/user-papersetting";
+import UserPaperEvaluation from "../pages/user/user-evaluation";
+
 
 const AppRouter = () => {
     return (
@@ -31,7 +37,15 @@ const AppRouter = () => {
                     <Route path="bill-generated" element={<BillGeneratedUser />} />
                     <Route path="bill-not-generated" element={<BillNotGeneratedUser />} />
                 </Route>
-            </Routes>
+                 {/* User Routes */}
+       
+        <Route path="/user/dashboard" element={<UserDashboard />} />
+        <Route path="/user/summary" element={<UserSummary />} />
+        <Route path="/user/activitybase" element={<UserActivityBase />} />
+        <Route path="/user/papersetting" element={<UserPaperSetting />} />
+        <Route path="/user/evaluation" element={<UserPaperEvaluation />} />
+
+        </Routes>
         </Router>
     );
 };

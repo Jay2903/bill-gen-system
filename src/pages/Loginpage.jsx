@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const LoginPage = () => {
   // States for username and password
@@ -79,7 +79,7 @@ const LoginPage = () => {
             </a>
           </div>
           <div className="text-sm text-center mt-2">
-            Don't have an account?{" "}
+             Don&apos;t have an account?{" "}
             <a href="/register" className="text-blue-500 hover:underline">
               Register here 
             </a>
