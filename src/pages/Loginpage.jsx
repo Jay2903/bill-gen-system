@@ -13,7 +13,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="bg-[url('Loginpageimage.jpg')] bg-cover bg-center min-h-screen flex flex-col">
+    <div className="bg-[url('/images/Loginpageimage.jpg')] bg-cover bg-center min-h-screen flex flex-col">
       {/* Navbar */}
       <header className="bg-white shadow-md py-4">
         <div className="container mx-auto flex justify-between items-center px-4">
@@ -81,7 +81,7 @@ const LoginPage = () => {
           <div className="text-sm text-center mt-2">
             Don't have an account?{" "}
             <a href="/register" className="text-blue-500 hover:underline">
-              Register here
+              Register here 
             </a>
           </div>
         </div>

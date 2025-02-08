@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useDispatch } from 'react-redux';
+import { registerUser } from '../redux/actions/registrationActions';
 
 const RegisterPage = () => {
+  const dispatch = useDispatch();
   const [role, setRole] = useState(""); // State for the role field
   const [biometric, setBiometric] = useState(""); // State for the biometric field
   const [formData, setFormData] = useState({
@@ -52,13 +55,13 @@ const RegisterPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // Log all the form data including the biometric number if Internal role is selected
-      const dataToShow = { ...formData, role, biometric }; // Add biometric data if role is Internal
+      const dataToShow = { ...formData, role, biometric };
+      dispatch(registerUser(dataToShow));
       console.log("Form Data Submitted:", dataToShow);
+      console.log(registerUser);
       alert("Form Submitted");
     }
   };
-  
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
@@ -385,11 +388,11 @@ const RegisterPage = () => {
             </button>
           </div>
           <div className="text-sm text-center mt-4">
-  Already have an account?{" "}
-  <a href="/" className="text-blue-500 hover:underline">
-    Sign In
-  </a>
-</div>
+            Already have an account?{" "}
+            <a href="/" className="text-blue-500 hover:underline">
+              Sign In
+            </a>
+          </div>
         </form>
       </div>
     </div>
