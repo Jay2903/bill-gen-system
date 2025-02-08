@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-const Sidebar = () => {
+const usersidebar = () => {
   return (
     <div className="sidebar">
      <h2 className="logo">Quick Bill</h2>
@@ -15,4 +15,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default usersidebar;
