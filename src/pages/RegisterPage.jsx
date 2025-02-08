@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 
 const RegisterPage = () => {
   const [role, setRole] = useState(""); // State for the role field
