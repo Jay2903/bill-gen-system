@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import * as XLSX from "xlsx"; // Import XLSX library to parse Excel files
 import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
-
 const ChooseFile = ({ setFileData }) => {
   const [activeSection, setActiveSection] = useState("Choose File");
   const [file, setFile] = useState(null);
